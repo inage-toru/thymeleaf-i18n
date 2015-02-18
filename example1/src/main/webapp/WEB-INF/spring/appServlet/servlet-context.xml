@@ -31,7 +31,7 @@
   <!--  Standard Spring MessageSource implementation                    -->
   <!-- **************************************************************** -->
   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-    <property name="basename" value="Messages" />
+    <property name="basename" value="i18n/Messages" />
     <property name="defaultEncoding" value="ISO-8859-1" />
   </bean>
 
