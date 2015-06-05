@@ -10,16 +10,16 @@
   </head>
   <body>
     <h1 th:text="#{hello.world}">FooBar</h1>
-  <form method="get">
-    <select name="lang">
-      <option value="ja" th:selected="${lang=='ja'}">日本語</option>
-      <option value="en" th:selected="${lang=='en'}">English</option>
-    </select>
-  </form>
-  <script type="text/javascript">
-  $('select[name="lang"]').change(function () {
-      $('form').submit();
-  });
-  </script>
+    <form method="get">
+      <select name="lang">
+        <option value="ja" th:selected="${lang=='ja'}">日本語</option>
+        <option value="en" th:selected="${lang=='en'}">English</option>
+      </select>
+    </form>
+    <script type="text/javascript">
+    $('select[name="lang"]').change(function () {
+        $('form').submit();
+    });
+    </script>
   </body>
 </html>
