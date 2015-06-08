@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+
+    compile 'org.springframework:spring-webmvc:4.1.4.RELEASE'
+    compile 'org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE'
+    compile 'ch.qos.logback:logback-classic:1.1.2'
+
+    testCompile 'junit:junit:4.12'
+}
+
+eclipse.project {
+    // Spring Project
+    natures 'org.springframework.ide.eclipse.core.springnature'
+    buildCommand 'org.springframework.ide.eclipse.core.springbuilder'
+
+    // Gradle Project
+    natures 'org.springsource.ide.eclipse.gradle.core.nature'
+}
